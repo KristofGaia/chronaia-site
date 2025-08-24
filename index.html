@@ -3,161 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GAÏA AVANCÉE - Innovation IA France 2030</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>Chronaïa & GAÏA AVANCÉE | France 2030 Deep Tech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
         body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f0f0f0;
-            color: #333;
+            font-family: 'Inter', sans-serif;
         }
-        header {
-            background: linear-gradient(135deg, #1a1a1a, #4a4a4a);
-            color: white;
-            text-align: center;
-            padding: 2rem;
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 50%, #7c3aed 100%);
         }
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 0.5em;
+        
+        .tech-pattern {
+            background-image: 
+                radial-gradient(circle at 25% 25%, #ffffff10 2px, transparent 2px),
+                radial-gradient(circle at 75% 75%, #ffffff10 2px, transparent 2px);
+            background-size: 50px 50px;
         }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
+        
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        .feature-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-        .feature-card:hover {
+        
+        .hover-lift:hover {
             transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
         }
-        .feature-card h3 {
-            color: #2c3e50;
-            margin-top: 0;
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards;
         }
-        .stats {
-            display: flex;
-            justify-content: space-around;
-            margin: 2rem 0;
-            flex-wrap: wrap;
-        }
-        .stat-item {
-            text-align: center;
-            padding: 1rem;
-        }
-        .stat-number {
-            font-size: 2em;
-            font-weight: bold;
-            color: #2c3e50;
-        }
-        .cta-button {
-            display: inline-block;
-            padding: 1rem 2rem;
-            background: #3498db;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s ease;
-        }
-        .cta-button:hover {
-            background: #2980b9;
-        }
-        footer {
-            background: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-            margin-top: 2rem;
-        }
-        @media (max-width: 768px) {
-            .feature-grid {
-                grid-template-columns: 1fr;
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
-            .stats {
-                flex-direction: column;
-            }
-            .stat-item {
-                margin: 1rem 0;
-            }
+        }
+        
+        .stagger-1 { animation-delay: 0.1s; }
+        .stagger-2 { animation-delay: 0.2s; }
+        .stagger-3 { animation-delay: 0.3s; }
+        .stagger-4 { animation-delay: 0.4s; }
+        
+        .pulse-glow {
+            animation: pulseGlow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes pulseGlow {
+            from { box-shadow: 0 0 20px rgba(34, 197, 94, 0.4); }
+            to { box-shadow: 0 0 30px rgba(34, 197, 94, 0.8); }
+        }
+        
+        .france-flag {
+            background: linear-gradient(90deg, #002395 33%, #ffffff 33%, #ffffff 66%, #ed2939 66%);
         }
     </style>
 </head>
-<body>
-    <header>
-        <h1>GAÏA AVANCÉE</h1>
-        <p>Innovation IA France 2030 Deep Tech</p>
-    </header>
-
-    <div class="container">
-        <div class="stats">
-            <div class="stat-item">
-                <div class="stat-number">102h</div>
-                <div>Tests validés</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">< 1%</div>
-                <div>CPU utilisé</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">1ère</div>
-                <div>Mondiale</div>
-            </div>
-        </div>
-
-        <div class="feature-grid">
-            <div class="feature-card">
-                <h3>🧠 IA Multi-Agents</h3>
-                <p>Architecture "multi-cerveaux" sur 4 cœurs avec capacité de résolution des contradictions logiques.</p>
-            </div>
-            <div class="feature-card">
-                <h3>💻 Processeur Fluidique</h3>
-                <p>Nouvelle génération de carte mère avec une efficacité énergétique révolutionnaire.</p>
-            </div>
-            <div class="feature-card">
-                <h3>🔋 Rechargement Passif</h3>
-                <p>Système d'autonomie énergétique totale garantissant un fonctionnement continu.</p>
-            </div>
-            <div class="feature-card">
-                <h3>🤖 Nanorobots Intelligents</h3>
-                <p>Technologies de manipulation moléculaire pour des applications précises et ciblées.</p>
-            </div>
-        </div>
-
-        <div class="feature-grid">
-            <div class="feature-card">
-                <h3>🛡️ Mode Sentinelle</h3>
-                <p>Protection continue 24/7 avec analyse prédictive des menaces.</p>
-            </div>
-            <div class="feature-card">
-                <h3>🩹 Patch Nanorobots</h3>
-                <p>Solution innovante pour une santé préventive personnalisée.</p>
-            </div>
-            <div class="feature-card">
-                <h3>🔧 Anti-Obsolescence</h3>
-                <p>Technologie révolutionnaire pour prolonger la durée de vie des appareils.</p>
-            </div>
-            <div class="feature-card">
-                <h3>🌊 Dépollution</h3>
-                <p>Système intelligent de traitement et purification environnementale.</p>
-            </div>
-        </div>
-    </div>
-
-    <footer>
-        <p>© 2025 Chronaïa - GAÏA AVANCÉE. Tous droits réservés.</p>
-    </footer>
-</body>
-</html>
+<body class="bg-gray-50">
+[... Continue with the rest of the content from your CodePen ...]
