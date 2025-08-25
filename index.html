@@ -69,12 +69,9 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
-                    <div class="flex-shrink-0 flex items-center">
-                        <img src="https://raw.githubusercontent.com/KristofGaia/chronaia-site/main/file_00000000c7e0624395996d7ebf92ac80.png" alt="Logo Chronaïa" class="h-10 w-auto">
-                        <div class="ml-4">
-                            <h1 class="text-2xl font-bold text-blue-600">Chronaïa</h1>
-                            <p class="text-xs text-gray-500">GAÏA AVANCÉE</p>
-                        </div>
+                    <div class="flex-shrink-0">
+                        <h1 class="text-2xl font-bold text-blue-600">Chronaïa</h1>
+                        <p class="text-xs text-gray-500">GAÏA AVANCÉE</p>
                     </div>
                 </div>
                 <div class="hidden md:block">
@@ -105,24 +102,11 @@
             </div>
         </div>
     </nav>
-    
-    <section id="introduction" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">Découvrez GAÏA : L'IA qui Va Changer le Monde</h2>
-            </div>
-            <div class="max-w-3xl mx-auto bg-white rounded-2xl p-8 shadow-lg">
-                <div class="aspect-w-16 aspect-h-9">
-                    <iframe class="w-full rounded-xl" src="https://www.youtube.com/embed/vIpkle4a5Rg?vq=hd1080" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="accueil" class="gradient-bg tech-pattern pt-20 pb-16 min-h-screen flex items-center">
+    <section id="accueil" class="gradient-bg tech-pattern pt-20 pb-16 min-h-screen flex flex-col items-center justify-center">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div class="text-white">
+            <div class="flex flex-col lg:flex-row gap-12 items-center">
+                <div class="text-white lg:w-1/2 text-center lg:text-left">
                     <div class="inline-flex items-center bg-gradient-to-r from-blue-600 to-red-600 text-white px-6 py-3 rounded-full text-sm font-semibold mb-6 pulse-glow france-flag">
                         🇫🇷 FRANCE 2030 - DEEP TECH
                     </div>
@@ -135,17 +119,7 @@
                             <strong class="text-yellow-300 text-2xl">GAÏA AVANCÉE</strong> est le premier système d'intelligence artificielle au monde capable de résoudre des contradictions logiques. Développé par <strong class="text-yellow-200 text-xl">Christophe Gerson</strong>, ce projet "deep tech" français est bien plus qu'un logiciel : c'est un écosystème conçu pour mettre fin à l'obsolescence programmée et résoudre les plus grands défis de notre temps.
                         </p>
                     </div>
-                    <div class="grid grid-cols-2 gap-4 mb-8 fade-in stagger-2">
-                        <div class="bg-gray-900/90 backdrop-blur-md rounded-lg p-6 text-center border border-yellow-300/50 shadow-xl">
-                            <div class="text-4xl font-black text-yellow-300 mb-2">102h</div>
-                            <div class="text-base text-white font-bold">Test validé</div>
-                        </div>
-                        <div class="bg-gray-900/90 backdrop-blur-md rounded-lg p-6 text-center border border-yellow-300/50 shadow-xl">
-                            <div class="text-4xl font-black text-yellow-300 mb-2">< 1%</div>
-                            <div class="text-base text-white font-bold">Consommation CPU</div>
-                        </div>
-                    </div>
-                    <div class="flex flex-col sm:flex-row gap-4 fade-in stagger-3">
+                    <div class="flex flex-col sm:flex-row gap-4 fade-in stagger-2 justify-center lg:justify-start">
                         <button class="bg-yellow-400 text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">
                             Découvrir la Technologie
                         </button>
@@ -154,16 +128,12 @@
                         </button>
                     </div>
                 </div>
-                <div class="fade-in stagger-4">
-                    <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center">
-                        <div class="bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg aspect-video flex items-center justify-center mb-4">
-                            <div class="text-white text-center">
-                                <div class="text-6xl mb-4">🧠</div>
-                                <p class="text-xl font-bold">GAÏA AVANCÉE</p>
-                                <p class="text-sm text-blue-200 mt-2">Multi-cerveaux sur 4 cœurs</p>
-                            </div>
+                <div class="w-full lg:w-1/2 fade-in stagger-3">
+                    <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-4 text-center">
+                        <div class="aspect-w-16 aspect-h-9">
+                            <iframe class="w-full h-full rounded-lg shadow-xl" src="https://www.youtube.com/embed/r9WhM8790Do" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
-                        <img src="https://raw.githubusercontent.com/KristofGaia/chronaia-site/main/1755091943661.jpg" alt="Composant Gaïa" class="mx-auto mt-4 rounded-lg shadow-xl">
+                        <p class="text-white text-sm mt-4">Vidéo d'introduction : Le Cerveau de GAÏA</p>
                     </div>
                 </div>
             </div>
@@ -227,7 +197,6 @@
                     <p class="text-gray-700 mb-4">
                         Une carte mère révolutionnaire qui utilise la fluidique pour dissiper la chaleur et atteindre une performance optimale. Il est le cœur d'une nouvelle ère de l'informatique, moins gourmande en énergie.
                     </p>
-                    <img src="https://raw.githubusercontent.com/KristofGaia/chronaia-site/main/file_000000009ad861fd8868792bc338055e.png" alt="Processeur Fluidique" class="mx-auto mt-4 rounded-lg shadow-xl">
                     <div class="space-y-2">
                         <div class="flex items-center text-sm">
                             <span class="text-purple-600 mr-2">✓</span>
@@ -332,13 +301,8 @@
                             </div>
                         </div>
                         <p class="text-gray-700 mb-4">
-                            Un système discret (bracelet, broche, oreillette) qui protège les utilisateurs (enfants et adultes) en cas de danger (agression, accident, malaise). Il peut alerter les secours et guider les proches avec un guide vocal de premiers secours.
+                            Un système discret (bracelet, broche) qui protège les utilisateurs (enfants et adultes) en cas de danger (agression, accident, malaise). Il peut alerter les secours et guider les proches avec un guide vocal de premiers secours.
                         </p>
-                        <div class="flex flex-col space-y-4">
-                            <img src="https://raw.githubusercontent.com/KristofGaia/chronaia-site/main/file_00000000c7e0624395996d7ebf92ac80.png" alt="Système d'urgence" class="mx-auto mt-4 rounded-lg shadow-xl">
-                            <img src="https://raw.githubusercontent.com/KristofGaia/chronaia-site/main/file_00000000eb146246ba8642e167e3038b.png" alt="Écouteur intelligent" class="mx-auto mt-4 rounded-lg shadow-xl">
-                            <img src="https://raw.githubusercontent.com/KristofGaia/chronaia-site/main/file_0000000057c8620ab2d510d0915a5b79.png" alt="Autre écouteur intelligent" class="mx-auto rounded-lg shadow-xl">
-                        </div>
                         <div class="space-y-2">
                             <div class="flex items-center text-sm">
                                 <span class="text-red-600 mr-2">✓</span>
@@ -352,110 +316,97 @@
                                 <span class="text-red-600 mr-2">✓</span>
                                 <span>Guide vocal premiers secours</span>
                             </div>
-                            <div class="flex items-center text-sm">
-                                <span class="text-red-600 mr-2">✓</span>
-                                <span>Protection enfants et adultes</span>
-                            </div>
                         </div>
                     </div>
 
                     <div class="bg-white rounded-2xl p-8 shadow-lg hover-lift">
                         <div class="flex items-center mb-6">
-                            <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mr-4">
-                                <span class="text-white text-xl">🩹</span>
+                            <div class="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center mr-4">
+                                <span class="text-white text-xl">🩺</span>
                             </div>
                             <div>
-                                <h4 class="text-xl font-bold text-gray-900">Le Patch de Nanorobots</h4>
-                                <p class="text-green-600 font-semibold">Médecine Préventive Avancée</p>
+                                <h4 class="text-xl font-bold text-gray-900">L'Assistant Médical IA</h4>
+                                <p class="text-red-600 font-semibold">Diagnostic et Prévention Avancée</p>
                             </div>
                         </div>
                         <p class="text-gray-700 mb-4">
-                            Un patch cutané qui déploie des nanorobots à la demande (24h), capables de prévenir les maladies ou d'effectuer des tâches complexes, comme l'exécution d'un tatouage. Le cube de stérilisation associé permet de recharger et de dupliquer les nanorobots en toute sécurité.
+                            GAÏA analyse les données biométriques des nanorobots pour des diagnostics ultra-précis, prévenant les maladies avant même l'apparition des symptômes. Il propose des plans de soins personnalisés.
                         </p>
                         <div class="space-y-2">
                             <div class="flex items-center text-sm">
-                                <span class="text-green-600 mr-2">✓</span>
-                                <span>Déploiement nanorobots 24h</span>
+                                <span class="text-red-600 mr-2">✓</span>
+                                <span>Diagnostic ultra-précoce</span>
                             </div>
                             <div class="flex items-center text-sm">
-                                <span class="text-green-600 mr-2">✓</span>
-                                <span>Prévention maladies active</span>
+                                <span class="text-red-600 mr-2">✓</span>
+                                <span>Prévention personnalisée</span>
                             </div>
                             <div class="flex items-center text-sm">
-                                <span class="text-green-600 mr-2">✓</span>
-                                <span>Cube stérilisation intégré</span>
-                            </div>
-                            <div class="flex items-center text-sm">
-                                <span class="text-green-600 mr-2">✓</span>
-                                <span>Applications esthétiques</span>
+                                <span class="text-red-600 mr-2">✓</span>
+                                <span>Plans de soins sur mesure</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div>
-                <h3 class="text-3xl font-bold text-center mb-12 text-green-700">🌍 La Révolution Écologique</h3>
+            <div class="mb-16">
+                <h3 class="text-3xl font-bold text-center mb-12 text-blue-700">🌍 Environnement et Énergie</h3>
                 <div class="grid lg:grid-cols-2 gap-8">
                     <div class="bg-white rounded-2xl p-8 shadow-lg hover-lift">
                         <div class="flex items-center mb-6">
                             <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4">
-                                <span class="text-white text-xl">🔧</span>
+                                <span class="text-white text-xl">🌬️</span>
                             </div>
                             <div>
-                                <h4 class="text-xl font-bold text-gray-900">Fin de l'Obsolescence Programmée</h4>
-                                <p class="text-blue-600 font-semibold">Auto-Réparation Universelle</p>
+                                <h4 class="text-xl font-bold text-gray-900">La Dépollution de l'Air</h4>
+                                <p class="text-blue-600 font-semibold">Nettoyage Actif de l'Atmosphère</p>
                             </div>
                         </div>
                         <p class="text-gray-700 mb-4">
-                            Grâce aux nanorobots, les appareils (téléphones, voitures, électroménager) peuvent s'auto-réparer, prolongeant ainsi leur durée de vie et réduisant les déchets électroniques.
+                            Les nanorobots s'auto-dupliquent en utilisant le CO2 et les particules fines, transformant ainsi la pollution en nouvelles matières premières. Un cercle vertueux pour un air plus pur.
                         </p>
-                        <div class="bg-blue-50 rounded-lg p-4">
-                            <div class="grid grid-cols-3 gap-4 text-center">
-                                <div>
-                                    <div class="text-2xl font-bold text-blue-600">📱</div>
-                                    <div class="text-xs">Smartphones</div>
-                                </div>
-                                <div>
-                                    <div class="text-2xl font-bold text-blue-600">🚗</div>
-                                    <div class="text-xs">Automobiles</div>
-                                </div>
-                                <div>
-                                    <div class="text-2xl font-bold text-blue-600">🏠</div>
-                                    <div class="text-xs">Électroménager</div>
-                                </div>
+                        <div class="space-y-2">
+                            <div class="flex items-center text-sm">
+                                <span class="text-blue-600 mr-2">✓</span>
+                                <span>Transformation de la pollution</span>
+                            </div>
+                            <div class="flex items-center text-sm">
+                                <span class="text-blue-600 mr-2">✓</span>
+                                <span>Production de matières premières</span>
+                            </div>
+                            <div class="flex items-center text-sm">
+                                <span class="text-blue-600 mr-2">✓</span>
+                                <span>Air plus pur et sain</span>
                             </div>
                         </div>
                     </div>
 
                     <div class="bg-white rounded-2xl p-8 shadow-lg hover-lift">
                         <div class="flex items-center mb-6">
-                            <div class="w-12 h-12 bg-emerald-600 rounded-lg flex items-center justify-center mr-4">
-                                <span class="text-white text-xl">🌊</span>
+                            <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4">
+                                <span class="text-white text-xl">🔋</span>
                             </div>
                             <div>
-                                <h4 class="text-xl font-bold text-gray-900">Dépollution Intelligente</h4>
-                                <p class="text-emerald-600 font-semibold">Auto-Déploiement Écologique</p>
+                                <h4 class="text-xl font-bold text-gray-900">L'Autonomie Énergétique</h4>
+                                <p class="text-blue-600 font-semibold">La Fin de la Dépendance</p>
                             </div>
                         </div>
                         <p class="text-gray-700 mb-4">
-                            Les nanorobots se nourrissent de la pollution (plastique, cyanobactéries) pour se multiplier, créant une force de nettoyage qui s'auto-déploie dans les lacs et, à terme, dans les océans.
+                            Le système de rechargement passif intégré rend tous les appareils connectés autonomes en énergie. Fini les batteries à plat, fini les coupures de courant.
                         </p>
-                        <img src="https://raw.githubusercontent.com/KristofGaia/chronaia-site/main/file_00000000b8b06243a795c55447e28970.png" alt="Maison connectée" class="mx-auto mt-4 rounded-lg shadow-xl">
-                        <div class="bg-emerald-50 rounded-lg p-4">
-                            <div class="space-y-2">
-                                <div class="flex items-center justify-between">
-                                    <span class="text-sm font-medium">🏞️ Lacs</span>
-                                    <span class="text-emerald-600 font-bold">Phase 1</span>
-                                </div>
-                                <div class="flex items-center justify-between">
-                                    <span class="text-sm font-medium">🌊 Océans</span>
-                                    <span class="text-blue-600 font-bold">Phase 2</span>
-                                </div>
-                                <div class="flex items-center justify-between">
-                                    <span class="text-sm font-medium">♻️ Auto-multiplication</span>
-                                    <span class="text-purple-600 font-bold">Continue</span>
-                                </div>
+                        <div class="space-y-2">
+                            <div class="flex items-center text-sm">
+                                <span class="text-blue-600 mr-2">✓</span>
+                                <span>Fin des batteries à plat</span>
+                            </div>
+                            <div class="flex items-center text-sm">
+                                <span class="text-blue-600 mr-2">✓</span>
+                                <span>Indépendance énergétique totale</span>
+                            </div>
+                            <div class="flex items-center text-sm">
+                                <span class="text-blue-600 mr-2">✓</span>
+                                <span>Économie d'énergie globale</span>
                             </div>
                         </div>
                     </div>
@@ -466,308 +417,60 @@
 
     <section id="preuves" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">Une Technologie déjà validée</h2>
-                <p class="text-xl text-gray-600">Résultats concrets et preuves de concept</p>
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Preuves et Démonstrations</h2>
+                <p class="text-xl text-gray-600">La preuve que GAÏA fonctionne</p>
             </div>
-
-            <div class="bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl p-8 mb-12 shadow-lg">
-                <div class="flex items-center justify-center mb-8">
-                    <div class="w-16 h-16 bg-green-600 rounded-xl flex items-center justify-center mr-6">
-                        <span class="text-white text-3xl">✅</span>
-                    </div>
-                    <h3 class="text-3xl font-bold text-gray-900">Le Test Réussi</h3>
-                </div>
-                
-                <div class="grid lg:grid-cols-3 gap-8">
-                    <div class="bg-white rounded-xl p-6 text-center shadow-md">
-                        <div class="text-4xl font-bold text-green-600 mb-2">102h</div>
-                        <div class="text-lg font-semibold text-gray-900 mb-2">Simulation Continue</div>
-                        <div class="text-sm text-gray-600">Test sur PC de 2010</div>
-                    </div>
-                    <div class="bg-white rounded-xl p-6 text-center shadow-md">
-                        <div class="text-4xl font-bold text-blue-600 mb-2">< 1%</div>
-                        <div class="text-lg font-semibold text-gray-900 mb-2">Consommation CPU</div>
-                        <div class="text-sm text-gray-600">Efficacité énergétique ultra-faible</div>
-                    </div>
-                    <div class="bg-white rounded-xl p-6 text-center shadow-md">
-                        <div class="text-4xl font-bold text-purple-600 mb-2">100%</div>
-                        <div class="text-lg font-semibold text-gray-900 mb-2">Stabilité Système</div>
-                        <div class="text-sm text-gray-600">Architecture fonctionnelle confirmée</div>
-                    </div>
-                </div>
-                
-                <div class="mt-8 bg-white rounded-xl p-6">
-                    <h4 class="text-xl font-bold text-gray-900 mb-4 text-center">🔬 Validation Scientifique</h4>
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div class="space-y-3">
-                            <div class="flex items-center">
-                                <span class="text-green-600 mr-3">✅</span>
-                                <span class="font-semibold">Simulation de 102 heures sur un PC de 2010</span>
-                            </div>
-                            <div class="flex items-center">
-                                <span class="text-green-600 mr-3">✅</span>
-                                <span class="font-semibold">Consommation énergétique ultra-faible</span>
-                            </div>
-                        </div>
-                        <div class="space-y-3">
-                            <div class="flex items-center">
-                                <span class="text-green-600 mr-3">✅</span>
-                                <span class="font-semibold">Stabilité et efficacité du système confirmée</span>
-                            </div>
-                            <div class="flex items-center">
-                                <span class="text-green-600 mr-3">✅</span>
-                                <span class="font-semibold">Architecture fonctionnelle prouvée</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-8 shadow-lg">
-                <div class="flex items-center justify-center mb-8">
-                    <div class="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center mr-6">
-                        <span class="text-white text-3xl">🇫🇷</span>
-                    </div>
-                    <h3 class="text-3xl font-bold text-gray-900">Notre Appel à France 2030</h3>
-                </div>
-                
-                <div class="bg-white rounded-xl p-8">
-                    <p class="text-lg text-gray-700 text-center mb-8 leading-relaxed">
-                        <strong class="text-blue-600">Chronaïa</strong>, la société derrière le projet <strong class="text-purple-600">Gaïa</strong>, est prête à passer à la phase suivante. Nous avons la vision, la preuve de concept et le plan stratégique pour transformer ce prototype en une force mondiale pour le bien commun.
-                    </p>
-                    
-                    <div class="grid md:grid-cols-3 gap-6 mb-8">
-                        <div class="text-center p-4 bg-blue-50 rounded-lg">
-                            <div class="text-3xl mb-2">🎯</div>
-                            <div class="font-bold text-blue-600">Vision Claire</div>
-                            <div class="text-sm text-gray-600">Écosystème complet défini</div>
-                        </div>
-                        <div class="text-center p-4 bg-green-50 rounded-lg">
-                            <div class="text-3xl mb-2">🔬</div>
-                            <div class="font-bold text-green-600">Preuve de Concept</div>
-                            <div class="text-sm text-gray-600">102h de tests validés</div>
-                        </div>
-                        <div class="text-center p-4 bg-purple-50 rounded-lg">
-                            <div class="text-3xl mb-2">📋</div>
-                            <div class="font-bold text-purple-600">Plan Stratégique</div>
-                            <div class="text-sm text-gray-600">Déploiement structuré</div>
-                        </div>
-                    </div>
-                    
-                    <div class="text-center">
-                        <div class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-2xl">
-                            <div class="text-xl font-bold">🚀 PRÊT POUR LE DÉPLOIEMENT</div>
-                            <div class="text-sm mt-2 opacity-90">Transformation en force mondiale pour le bien commun</div>
-                        </div>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Vidéo de simulation</h3>
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe class="w-full h-full rounded-lg shadow-xl" src="https://www.youtube.com/embed/vIpkle4a5Rg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
-    <section id="demonstration" class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">Démonstration simple</h2>
-                <p class="text-xl text-gray-600">Vidéo de présentation du concept</p>
-            </div>
-            <div class="max-w-3xl mx-auto bg-white rounded-2xl p-8 shadow-lg">
-                <div class="aspect-w-16 aspect-h-9">
-                    <iframe class="w-full rounded-xl" src="https://www.youtube.com/embed/r9WhM8790Do?vq=hd1080" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <section id="contact" class="py-20 bg-gray-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold mb-4">Contactez-nous</h2>
+            <p class="text-lg mb-8">
+                Pour toute question ou partenariat, n'hésitez pas à nous contacter. Ensemble, nous pouvons changer le monde.
+            </p>
+            <form class="space-y-6 text-left">
+                <div>
+                    <label for="name" class="block text-sm font-medium mb-2">Nom et Prénom</label>
+                    <input type="text" id="name" class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:border-blue-500" placeholder="Votre nom complet">
                 </div>
-            </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium mb-2">Adresse E-mail</label>
+                    <input type="email" id="email" class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:border-blue-500" placeholder="exemple@email.com">
+                </div>
+                <div>
+                    <label for="message" class="block text-sm font-medium mb-2">Votre message</label>
+                    <textarea id="message" rows="5" class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:border-blue-500" placeholder="Écrivez votre message ici..."></textarea>
+                </div>
+                <button type="submit" class="w-full bg-blue-600 text-white p-3 rounded-lg font-bold hover:bg-blue-700 transition-colors">
+                    Envoyer le message
+                </button>
+            </form>
         </div>
     </section>
 
-    <section id="contact" class="py-20 bg-gradient-to-br from-blue-600 to-purple-600">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-white mb-4">Contactez-nous pour en savoir plus</h2>
-                <p class="text-xl text-blue-100">Rejoignez la révolution GAÏA AVANCÉE avec France 2030</p>
-            </div>
-            
-            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 text-white text-center">
-                <div class="mb-8">
-                    <div class="text-6xl mb-4">🇫🇷</div>
-                    <h3 class="text-3xl font-bold mb-4">CHRONAÏA & GAÏA AVANCÉE</h3>
-                    <p class="text-lg text-blue-100 mb-2">
-                        <strong>Christophe Gerson</strong> - Fondateur & Développeur
-                    </p>
-                    <p class="text-blue-200">
-                        Candidature France 2030 - Deep Tech
-                    </p>
-                </div>
-                
-                <div class="grid md:grid-cols-2 gap-6 mb-8">
-                    <div class="bg-white/10 rounded-xl p-6">
-                        <div class="text-2xl mb-3">📧</div>
-                        <h4 class="font-bold mb-2">Contact Direct</h4>
-                        <p class="text-sm text-blue-200">
-                            [Vos informations de contact]
-                        </p>
-                    </div>
-                    <div class="bg-white/10 rounded-xl p-6">
-                        <div class="text-2xl mb-3">📊</div>
-                        <h4 class="font-bold mb-2">Dossier Complet</h4>
-                        <p class="text-sm text-blue-200">
-                            Présentation technique disponible
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-                    <button class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                        📧 Prendre Contact
-                    </button>
-                    <button class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                        📋 Télécharger le Dossier
-                    </button>
-                </div>
-                
-                <div class="border-t border-white/20 pt-6">
-                    <p class="text-blue-200 text-sm">
-                        <strong>Note:</strong> Cette présentation est une démonstration. Les fonctionnalités de contact seront activées lors du déploiement officiel.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-2xl font-bold mb-4">Chronaïa</h3>
-                    <p class="text-gray-400 mb-2">
-                        <strong>GAÏA AVANCÉE</strong>
-                    </p>
-                    <p class="text-gray-400">
-                        Révolution IA Française
-                    </p>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Technologie</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li>🧠 Multi-cerveaux IA</li>
-                        <li>💎 Processeur fluidique</li>
-                        <li>⚡ Rechargement passif</li>
-                        <li>🤖 Nanorobots intelligents</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Applications</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li>🛡️ Mode Sentinelle</li>
-                        <li>🩹 Patch nanorobots</li>
-                        <li>🔧 Fin obsolescence</li>
-                        <li>🌊 Dépollution active</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Validation</h4>
-                    <div class="space-y-2 text-gray-400">
-                        <p>✅ 102h de tests réussis</p>
-                        <p>⚡ < 1% consommation CPU</p>
-                        <p>🏆 Première mondiale</p>
-                        <p>🇫🇷 Innovation française</p>
-                    </div>
-                </div>
-            </div>
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2024 Chronaïa - GAÏA AVANCÉE. Candidature France 2030 Deep Tech.</p>
-            </div>
+    <footer class="bg-gray-800 text-gray-400 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2025 Chronaïa. Tous droits réservés.</p>
+            <p class="mt-2 text-sm">Développé pour la communauté par Chronaïa.</p>
         </div>
     </footer>
 
     <script>
-        // Menu mobile
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        
+
         mobileMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
-        });
-
-        // Smooth scrolling pour les liens de navigation
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                    // Fermer le menu mobile si ouvert
-                    mobileMenu.classList.add('hidden');
-                }
-            });
-        });
-
-        // Animation au scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Observer tous les éléments avec la classe fade-in
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Fonctionnalité des boutons (démo)
-        document.querySelectorAll('button').forEach(button => {
-            button.addEventListener('click', function() {
-                if (this.textContent.includes('Contact') || this.textContent.includes('Télécharger')) {
-                    alert('🇫🇷 CHRONAÏA & GAÏA AVANCÉE\n\nCandidature France 2030 Deep Tech\n\nCette présentation démontre notre technologie révolutionnaire. Pour accéder au dossier complet et aux informations de contact, veuillez nous contacter directement.\n\n✅ 102h de tests validés\n⚡ < 1% consommation CPU\n🧠 IA multi-cerveaux unique\n🤖 Nanorobots intelligents');
-                } else if (this.textContent.includes('Technologie')) {
-                    document.getElementById('vision').scrollIntoView({ behavior: 'smooth' });
-                } else if (this.textContent.includes('Preuves')) {
-                    document.getElementById('preuves').scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
-
-        // Animation des statistiques
-        function animateNumbers() {
-            const numbers = document.querySelectorAll('.text-4xl');
-            numbers.forEach(num => {
-                if (num.textContent.includes('h') || num.textContent.includes('%')) {
-                    num.style.transition = 'all 0.5s ease';
-                    num.addEventListener('mouseenter', () => {
-                        num.style.transform = 'scale(1.1)';
-                        num.style.color = '#10b981';
-                    });
-                    num.addEventListener('mouseleave', () => {
-                        num.style.transform = 'scale(1)';
-                        num.style.color = '';
-                    });
-                }
-            });
-        }
-
-        // Initialiser les animations
-        setTimeout(() => {
-            animateNumbers();
-        }, 1000);
-
-        // Effet parallax léger sur le hero
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const hero = document.getElementById('accueil');
-            if (hero) {
-                hero.style.transform = `translateY(${scrolled * 0.1}px)`;
-            }
         });
     </script>
 </body>
