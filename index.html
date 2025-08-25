@@ -1,128 +1,477 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chronaïa & GAÏA AVANCÉE | France 2030 Deep Tech</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-body { font-family: 'Inter', sans-serif; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chronaïa & GAÏA AVANCÉE | France 2030 Deep Tech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 50%, #7c3aed 100%);
+        }
+        
+        .tech-pattern {
+            background-image: 
+                radial-gradient(circle at 25% 25%, #ffffff10 2px, transparent 2px),
+                radial-gradient(circle at 75% 75%, #ffffff10 2px, transparent 2px);
+            background-size: 50px 50px;
+        }
+        
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .stagger-1 { animation-delay: 0.1s; }
+        .stagger-2 { animation-delay: 0.2s; }
+        .stagger-3 { animation-delay: 0.3s; }
+        .stagger-4 { animation-delay: 0.4s; }
+        
+        .pulse-glow {
+            animation: pulseGlow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes pulseGlow {
+            from { box-shadow: 0 0 20px rgba(34, 197, 94, 0.4); }
+            to { box-shadow: 0 0 30px rgba(34, 197, 94, 0.8); }
+        }
 
-.gradient-bg {
-    background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 50%, #7c3aed 100%);
-}
-
-.tech-pattern {
-    background-image: 
-        radial-gradient(circle at 25% 25%, #ffffff10 2px, transparent 2px),
-        radial-gradient(circle at 75% 75%, #ffffff10 2px, transparent 2px);
-    background-size: 50px 50px;
-}
-
-.fade-in { opacity:0; transform:translateY(30px); animation:fadeInUp 0.8s ease forwards; }
-@keyframes fadeInUp { to { opacity:1; transform:translateY(0); } }
-.stagger-1 { animation-delay:0.1s; }
-.stagger-2 { animation-delay:0.2s; }
-.stagger-3 { animation-delay:0.3s; }
-.stagger-4 { animation-delay:0.4s; }
-
-.hover-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
-.hover-lift:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
-
-.pulse-glow { animation: pulseGlow 2s ease-in-out infinite alternate; }
-@keyframes pulseGlow { from { box-shadow:0 0 20px rgba(34,197,94,0.4); } to { box-shadow:0 0 30px rgba(34,197,94,0.8); } }
-
-.france-flag {
-    background: linear-gradient(90deg, #002395 33%, #ffffff 33%, #ffffff 66%, #ed2939 66%);
-}
-
-/* Oreillette interactive */
-.earpiece-container { position: relative; display:inline-block; }
-.earpiece-container img { transition: opacity 0.4s ease, transform 0.4s ease; display:block; }
-.earpiece-container img.top { position:absolute; top:0; left:0; }
-.earpiece-container:hover img.top { opacity:0; transform:scale(1.05); }
-</style>
+        .france-flag {
+            background: linear-gradient(90deg, #002395 33%, #ffffff 33%, #ffffff 66%, #ed2939 66%);
+        }
+    </style>
 </head>
 <body class="bg-gray-50">
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <h1 class="text-2xl font-bold text-blue-600">Chronaïa</h1>
+                        <p class="text-xs text-gray-500">GAÏA AVANCÉE</p>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#accueil" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Accueil</a>
+                        <a href="#vision" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Vision</a>
+                        <a href="#applications" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Applications</a>
+                        <a href="#preuves" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Preuves</a>
+                        <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-blue-600">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#accueil" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Accueil</a>
+                <a href="#vision" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Vision</a>
+                <a href="#applications" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Applications</a>
+                <a href="#preuves" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Preuves</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Contact</a>
+            </div>
+        </div>
+    </nav>
 
-<!-- Navbar -->
-<nav class="bg-white shadow-lg fixed w-full top-0 z-50">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between items-center h-16">
-      <div class="flex items-center">
-        <img src="https://raw.githubusercontent.com/ton-repo/images/main/file_0000000057c8620ab2d510d0915a5b79.png" alt="Logo" class="h-12 w-12 mr-3">
-        <div>
-          <h1 class="text-2xl font-bold text-blue-600">Chronaïa</h1>
-          <p class="text-xs text-gray-500">GAÏA AVANCÉE</p>
+    <section id="accueil" class="gradient-bg tech-pattern pt-20 pb-16 min-h-screen flex flex-col items-center justify-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row gap-12 items-center">
+                <div class="text-white lg:w-1/2 text-center lg:text-left">
+                    <div class="inline-flex items-center bg-gradient-to-r from-blue-600 to-red-600 text-white px-6 py-3 rounded-full text-sm font-semibold mb-6 pulse-glow france-flag">
+                        🇫🇷 FRANCE 2030 - DEEP TECH
+                    </div>
+                    <h1 class="text-5xl lg:text-6xl font-bold mb-6 fade-in">
+                        <span class="text-yellow-300">CHRONAÏA & GAÏA AVANCÉE</span><br>
+                        <span class="text-2xl lg:text-3xl text-blue-200">La Révolution IA Française qui change le monde</span>
+                    </h1>
+                    <div class="bg-gray-900/90 backdrop-blur-md rounded-2xl p-8 mb-8 fade-in stagger-1 border border-white/50 shadow-2xl">
+                        <p class="text-xl text-white leading-relaxed font-bold">
+                            <strong class="text-yellow-300 text-2xl">GAÏA AVANCÉE</strong> est le premier système d'intelligence artificielle au monde capable de résoudre des contradictions logiques. Développé par <strong class="text-yellow-200 text-xl">Christophe Gerson</strong>, ce projet "deep tech" français est bien plus qu'un logiciel : c'est un écosystème conçu pour mettre fin à l'obsolescence programmée et résoudre les plus grands défis de notre temps.
+                        </p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-4 fade-in stagger-2 justify-center lg:justify-start">
+                        <button class="bg-yellow-400 text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">
+                            Découvrir la Technologie
+                        </button>
+                        <button class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors">
+                            Voir les Preuves
+                        </button>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 fade-in stagger-3">
+                    <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-4 text-center">
+                        <div class="aspect-w-16 aspect-h-9">
+                            <iframe class="w-full h-full rounded-lg shadow-xl" src="https://www.youtube.com/embed/vIpkle4a5Rg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <p class="text-white text-sm mt-4">Vidéo d'introduction : Chronaïa & GAÏA AVANCÉE</p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="hidden md:block">
-        <div class="ml-10 flex items-baseline space-x-8">
-          <a href="#accueil" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Accueil</a>
-          <a href="#vision" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Vision</a>
-          <a href="#applications" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Applications</a>
-          <a href="#preuves" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Preuves</a>
-          <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors">Contact</a>
-        </div>
-      </div>
-      <div class="md:hidden">
-        <button id="mobile-menu-btn" class="text-gray-700 hover:text-blue-600">
-          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-          </svg>
-        </button>
-      </div>
-    </div>
-  </div>
-  <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
-    <div class="px-2 pt-2 pb-3 space-y-1">
-      <a href="#accueil" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Accueil</a>
-      <a href="#vision" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Vision</a>
-      <a href="#applications" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Applications</a>
-      <a href="#preuves" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Preuves</a>
-      <a href="#contact" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Contact</a>
-    </div>
-  </div>
-</nav>
+    </section>
 
-<!-- Accueil -->
-<section id="accueil" class="gradient-bg tech-pattern pt-20 pb-16 min-h-screen flex flex-col items-center justify-center">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex flex-col lg:flex-row gap-12 items-center">
-      <div class="text-white lg:w-1/2 text-center lg:text-left">
-        <div class="inline-flex items-center bg-gradient-to-r from-blue-600 to-red-600 text-white px-6 py-3 rounded-full text-sm font-semibold mb-6 pulse-glow france-flag">
-          🇫🇷 FRANCE 2030 - DEEP TECH
-        </div>
-        <h1 class="text-5xl lg:text-6xl font-bold mb-6 fade-in">
-          <span class="text-yellow-300">CHRONAÏA & GAÏA AVANCÉE</span><br>
-          <span class="text-2xl lg:text-3xl text-blue-200">La Révolution IA Française qui change le monde</span>
-        </h1>
-        <div class="bg-gray-900/90 backdrop-blur-md rounded-2xl p-8 mb-8 fade-in stagger-1 border border-white/50 shadow-2xl">
-          <p class="text-xl text-white leading-relaxed font-bold">
-            <strong class="text-yellow-300 text-2xl">GAÏA AVANCÉE</strong> est le premier système d'intelligence artificielle au monde capable de résoudre des contradictions logiques. Développé par <strong class="text-yellow-200 text-xl">Christophe Gerson</strong>, ce projet "deep tech" français est bien plus qu'un logiciel : c'est un écosystème conçu pour mettre fin à l'obsolescence programmée et résoudre les plus grands défis de notre temps.
-          </p>
-        </div>
-        <div class="flex flex-col sm:flex-row gap-4 fade-in stagger-2 justify-center lg:justify-start">
-          <a href="#applications" class="bg-yellow-400 text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">Découvrir la Technologie</a>
-          <a href="#preuves" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors">Voir les Preuves</a>
-        </div>
-      </div>
-      <div class="w-full lg:w-1/2 fade-in stagger-3">
-        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-4 text-center">
-          <div class="aspect-w-16 aspect-h-9">
-            <iframe class="w-full h-full rounded-lg shadow-xl" src="https://www.youtube.com/embed/vIpkle4a5Rg" frameborder="0" allowfullscreen></iframe>
-          </div>
-          <p class="text-white text-sm mt-4">Vidéo d'introduction : Chronaïa & GAÏA AVANCÉE</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    <section id="vision" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Notre Révolution Technologique</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Trois innovations majeures qui transforment l'informatique et l'énergie
+                </p>
+            </div>
 
-<!-- Suite complète avec Vision, Applications, Preuves, Contact et Footer à générer -->
-<script>
-const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-const mobileMenu = document.getElementById('mobile-menu');
-mobileMenuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
-</
+            <div class="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-8 mb-12 hover-lift">
+                <div class="flex items-center mb-8">
+                    <div class="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center mr-6">
+                        <span class="text-white text-3xl">🧠</span>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900">Le Cerveau de GAÏA</h3>
+                        <p class="text-blue-600 font-semibold">IA Multi-Agents Unique au Monde</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl p-6">
+                    <p class="text-lg text-gray-700 mb-6">
+                        GAÏA est une IA multi-agents unique, capable de fonctionner avec une efficacité sans précédent. Son architecture de <strong>"multi-cerveaux sur 4 cœurs"</strong> lui permet de gérer des millions de tâches en parallèle tout en consommant une quantité d'énergie infime.
+                    </p>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="bg-blue-50 rounded-lg p-4 text-center">
+                            <div class="text-2xl mb-2">⚡</div>
+                            <div class="font-semibold text-sm">Efficacité Maximale</div>
+                            <div class="text-xs text-gray-600">Millions de tâches parallèles</div>
+                        </div>
+                        <div class="bg-green-50 rounded-lg p-4 text-center">
+                            <div class="text-2xl mb-2">🔋</div>
+                            <div class="font-semibold text-sm">Énergie Infime</div>
+                            <div class="text-xs text-gray-600">< 1% consommation CPU</div>
+                        </div>
+                        <div class="bg-purple-50 rounded-lg p-4 text-center">
+                            <div class="text-2xl mb-2">🎯</div>
+                            <div class="font-semibold text-sm">Contradictions Résolues</div>
+                            <div class="text-xs text-gray-600">Première mondiale</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8 mb-12">
+                <div class="bg-gradient-to-br from-purple-50 to-violet-100 rounded-2xl p-8 hover-lift">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
+                            <span class="text-white text-xl">💎</span>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-900">Le Processeur Fluidique</h4>
+                            <p class="text-purple-600 font-semibold">Carte Mère Révolutionnaire</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">
+                        Une carte mère révolutionnaire qui utilise la fluidique pour dissiper la chaleur et atteindre une performance optimale. Il est le cœur d'une nouvelle ère de l'informatique, moins gourmande en énergie.
+                    </p>
+                    <div class="space-y-2">
+                        <div class="flex items-center text-sm">
+                            <span class="text-purple-600 mr-2">✓</span>
+                            <span>Dissipation thermique fluidique</span>
+                        </div>
+                        <div class="flex items-center text-sm">
+                            <span class="text-purple-600 mr-2">✓</span>
+                            <span>Performance optimale continue</span>
+                        </div>
+                        <div class="flex items-center text-sm">
+                            <span class="text-purple-600 mr-2">✓</span>
+                            <span>Consommation énergétique réduite</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl p-8 hover-lift">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-emerald-600 rounded-lg flex items-center justify-center mr-4">
+                            <span class="text-white text-xl">⚡</span>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-900">Le Rechargement Passif</h4>
+                            <p class="text-emerald-600 font-semibold">Autonomie Énergétique Totale</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">
+                        Un système qui capte l'énergie ambiante (ondes radio, vibrations, sons) pour recharger les appareils en continu. Il rend toute technologie autonome, libérant ainsi la France et le monde de la dépendance énergétique.
+                    </p>
+                    <div class="space-y-2">
+                        <div class="flex items-center text-sm">
+                            <span class="text-emerald-600 mr-2">✓</span>
+                            <span>Captation énergie ambiante</span>
+                        </div>
+                        <div class="flex items-center text-sm">
+                            <span class="text-emerald-600 mr-2">✓</span>
+                            <span>Rechargement continu automatique</span>
+                        </div>
+                        <div class="flex items-center text-sm">
+                            <span class="text-emerald-600 mr-2">✓</span>
+                            <span>Indépendance énergétique</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-gradient-to-br from-orange-50 to-yellow-100 rounded-2xl p-8 hover-lift">
+                <div class="flex items-center mb-8">
+                    <div class="w-16 h-16 bg-orange-600 rounded-xl flex items-center justify-center mr-6">
+                        <span class="text-white text-3xl">🤖</span>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900">Les Nanorobots Intelligents</h3>
+                        <p class="text-orange-600 font-semibold">La Main de GAÏA - Manipulation Moléculaire</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl p-6">
+                    <p class="text-lg text-gray-700 mb-6">
+                        Ces nanorobots sont la main de GAÏA, capable de manipuler la matière à l'échelle moléculaire. Leur fonction la plus innovante est leur capacité à <strong>se dupliquer en utilisant la pollution comme matière première</strong>.
+                    </p>
+                    <div class="grid md:grid-cols-4 gap-4">
+                        <div class="bg-orange-50 rounded-lg p-4 text-center">
+                            <div class="text-2xl mb-2">🔬</div>
+                            <div class="font-semibold text-sm">Manipulation Moléculaire</div>
+                        </div>
+                        <div class="bg-green-50 rounded-lg p-4 text-center">
+                            <div class="text-2xl mb-2">♻️</div>
+                            <div class="font-semibold text-sm">Auto-Duplication</div>
+                        </div>
+                        <div class="bg-blue-50 rounded-lg p-4 text-center">
+                            <div class="text-2xl mb-2">🌍</div>
+                            <div class="font-semibold text-sm">Dépollution Active</div>
+                        </div>
+                        <div class="bg-purple-50 rounded-lg p-4 text-center">
+                            <div class="text-2xl mb-2">🔧</div>
+                            <div class="font-semibold text-sm">Auto-Réparation</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="applications" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Une Solution pour Chaque Défi</h2>
+                <p class="text-xl text-gray-600">Applications concrètes qui transforment la société</p>
+            </div>
+
+            <div class="mb-16">
+                <h3 class="text-3xl font-bold text-center mb-12 text-red-700">🛡️ Sécurité et Santé</h3>
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-2xl p-8 shadow-lg hover-lift">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center mr-4">
+                                <span class="text-white text-xl">🛡️</span>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-900">Le Mode Sentinelle</h4>
+                                <p class="text-red-600 font-semibold">Protection Intelligente 24h/24</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 mb-4">
+                            Un système discret (bracelet, broche) qui protège les utilisateurs (enfants et adultes) en cas de danger (agression, accident, malaise). Il peut alerter les secours et guider les proches avec un guide vocal de premiers secours.
+                        </p>
+                        <div class="space-y-2">
+                            <div class="flex items-center text-sm">
+                                <span class="text-red-600 mr-2">✓</span>
+                                <span>Détection automatique des dangers</span>
+                            </div>
+                            <div class="flex items-center text-sm">
+                                <span class="text-red-600 mr-2">✓</span>
+                                <span>Alerte secours instantanée</span>
+                            </div>
+                            <div class="flex items-center text-sm">
+                                <span class="text-red-600 mr-2">✓</span>
+                                <span>Guide vocal premiers secours</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-8 shadow-lg hover-lift">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center mr-4">
+                                <span class="text-white text-xl">🩺</span>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-900">L'Assistant Médical IA</h4>
+                                <p class="text-red-600 font-semibold">Diagnostic et Prévention Avancée</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 mb-4">
+                            GAÏA analyse les données biométriques des nanorobots pour des diagnostics ultra-précis, prévenant les maladies avant même l'apparition des symptômes. Il propose des plans de soins personnalisés.
+                        </p>
+                        <div class="space-y-2">
+                            <div class="flex items-center text-sm">
+                                <span class="text-red-600 mr-2">✓</span>
+                                <span>Diagnostic ultra-précoce</span>
+                            </div>
+                            <div class="flex items-center text-sm">
+                                <span class="text-red-600 mr-2">✓</span>
+                                <span>Prévention personnalisée</span>
+                            </div>
+                            <div class="flex items-center text-sm">
+                                <span class="text-red-600 mr-2">✓</span>
+                                <span>Plans de soins sur mesure</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-16">
+                <h3 class="text-3xl font-bold text-center mb-12 text-blue-700">🌍 Environnement et Énergie</h3>
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-2xl p-8 shadow-lg hover-lift">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4">
+                                <span class="text-white text-xl">🌬️</span>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-900">La Dépollution de l'Air</h4>
+                                <p class="text-blue-600 font-semibold">Nettoyage Actif de l'Atmosphère</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 mb-4">
+                            Les nanorobots s'auto-dupliquent en utilisant le CO2 et les particules fines, transformant ainsi la pollution en nouvelles matières premières. Un cercle vertueux pour un air plus pur.
+                        </p>
+                        <div class="space-y-2">
+                            <div class="flex items-center text-sm">
+                                <span class="text-blue-600 mr-2">✓</span>
+                                <span>Transformation de la pollution</span>
+                            </div>
+                            <div class="flex items-center text-sm">
+                                <span class="text-blue-600 mr-2">✓</span>
+                                <span>Production de matières premières</span>
+                            </div>
+                            <div class="flex items-center text-sm">
+                                <span class="text-blue-600 mr-2">✓</span>
+                                <span>Air plus pur et sain</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-8 shadow-lg hover-lift">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4">
+                                <span class="text-white text-xl">🔋</span>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-900">L'Autonomie Énergétique</h4>
+                                <p class="text-blue-600 font-semibold">La Fin de la Dépendance</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 mb-4">
+                            Le système de rechargement passif intégré rend tous les appareils connectés autonomes en énergie. Fini les batteries à plat, fini les coupures de courant.
+                        </p>
+                        <div class="space-y-2">
+                            <div class="flex items-center text-sm">
+                                <span class="text-blue-600 mr-2">✓</span>
+                                <span>Fin des batteries à plat</span>
+                            </div>
+                            <div class="flex items-center text-sm">
+                                <span class="text-blue-600 mr-2">✓</span>
+                                <span>Indépendance énergétique totale</span>
+                            </div>
+                            <div class="flex items-center text-sm">
+                                <span class="text-blue-600 mr-2">✓</span>
+                                <span>Économie d'énergie globale</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="preuves" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Preuves et Démonstrations</h2>
+                <p class="text-xl text-gray-600">La preuve que GAÏA fonctionne</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="col-span-2 text-center">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Vidéo de simulation</h3>
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe class="w-full h-full rounded-lg shadow-xl" src="https://www.youtube.com/embed/r9WhM8790Do" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-gray-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold mb-4">Contactez-nous</h2>
+            <p class="text-lg mb-8">
+                Pour toute question ou partenariat, n'hésitez pas à nous contacter. Ensemble, nous pouvons changer le monde.
+            </p>
+            <form class="space-y-6 text-left" action="mailto:votre-email@exemple.com" method="post" enctype="text/plain">
+                <div>
+                    <label for="name" class="block text-sm font-medium mb-2">Nom et Prénom</label>
+                    <input type="text" id="name" name="Nom" class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:border-blue-500" placeholder="Votre nom complet">
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium mb-2">Adresse E-mail</label>
+                    <input type="email" id="email" name="Email" class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:border-blue-500" placeholder="exemple@email.com">
+                </div>
+                <div>
+                    <label for="message" class="block text-sm font-medium mb-2">Votre message</label>
+                    <textarea id="message" name="Message" rows="5" class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:border-blue-500" placeholder="Écrivez votre message ici..."></textarea>
+                </div>
+                <button type="submit" class="w-full bg-blue-600 text-white p-3 rounded-lg font-bold hover:bg-blue-700 transition-colors">
+                    Envoyer le message
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-gray-400 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2025 Chronaïa. Tous droits réservés.</p>
+            <p class="mt-2 text-sm">Développé pour la communauté par Chronaïa.</p>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
